@@ -11,9 +11,7 @@ const notes = require('./notes');
 const argv = yargs.argv;
 
 // node app.js 'command'
-var command = process.argv[2];
-console.log("Command:", process.argv);
-console.log('Yargs: ', argv);
+var command = argv._[0];
 
 if (command === "add") {
   notes.addNote(argv.title, argv.body);
